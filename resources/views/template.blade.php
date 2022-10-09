@@ -19,17 +19,35 @@
     <div class="wrapper">
 
         <!-- Navbar -->
-        <nav class="main-header navbar navbar-expand navbar-white navbar-light d-flex justify-content-between">
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
             <!-- Left navbar links -->
             <ul class="navbar-nav d-flex justify-content-between">
                 <li class="nav-item">
                     <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
                 </li>
             </ul>
+            @auth
+
             <form action="/logout" method="post">
                 @csrf
                 <button type="submit" class="border-0 bg-transparent text-secondary"><i class="fas fa-door-open"></i> Logout</button>
             </form>
+            @else
+            <form action="/logout" method="post">
+                @csrf
+                <button type="submit" class="border-0 bg-transparent text-secondary"><i class="fas fa-door-open"></i> Login</button>
+            </form>
+            <a href="/register" class="border-0 bg-transparent text-secondary">Daftar</a>
+            @endauth
+            
+
+            
+
+            
+                @csrf
+                
+            {{-- <button type="submit" class="border-0 bg-transparent text-secondary"><i class="fas fa-door-open"></i> Daftar</button> --}}
+            
             
             
         </nav>
@@ -39,7 +57,9 @@
         <aside class="main-sidebar sidebar-dark-primary ">
             <!-- Brand Logo -->
             <a href="" class="brand-link text-center">
-                <span class="brand-text font-weight-bolder text-center bg-primary px-2 py-1 rounded-circle">Catatan Perjalanan</span>
+                <span >Uji Level Paket 1
+                    
+                </span>
             </a>
 
             <!-- Sidebar -->
